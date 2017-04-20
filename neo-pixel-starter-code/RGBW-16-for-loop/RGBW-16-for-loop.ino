@@ -1,6 +1,10 @@
 // RGBW (Red Green Blue White Neo-Pixel starter code
 // 16 LEDS  increment
 // CW Coleman 170413
+int clearColor ();
+int redColor ();
+int greenColor ():
+int blueColor ();
 
 #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
@@ -23,15 +27,19 @@ void setup() {
   strip.show(); // Initialize all pixels to 'off'
 }
 
-// Initialize some variables for the void loop()
+
+
+void loop() {
+  clearColor();
+
+}
+int clearColor(){
+  // Initialize some variables for the void loop()
 int red = 0, green= 0, blue = 0, white = 10;
 int wait = 500;
 int led = 0;
 int i;
-
-void loop() {
-  
-  for ( led = 0; led < 16; led++){  
+    for ( led = 0; led < 16; led++){  
     strip.setPixelColor(led, red, green , blue, white);
   }//end of for loop
     strip.show();
